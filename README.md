@@ -1,29 +1,52 @@
 # Smart Clothesline System
 
 ## Overview
-The Smart Clothesline System is an IoT-based project designed to protect clothes from sudden weather changes. It uses sensors and Arduino-based control logic to automate the movement or response of the clothesline system based on environmental conditions.
+The Smart Clothesline System is an IoT-based project designed to protect clothes from sudden weather changes. It uses sensor-based detection and Arduino-controlled automation to respond to environmental conditions in real time.
+
+## Problem Statement
+Drying clothes outdoors is challenging due to unpredictable weather, especially sudden rainfall. Manual intervention is required to prevent clothes from getting wet, which is inconvenient and inefficient.
+
+## Solution
+This system automates the process using sensors and embedded control logic. It continuously monitors environmental conditions and triggers an automatic response when rain or other changes are detected.
 
 ## Features
-- Detects environmental changes using sensors
-- Automates response using Arduino
-- Helps protect clothes from rain or adverse weather
-- Reduces manual effort through sensor-based control
+- Detects environmental conditions using sensors
+- Automated response using servo motor
+- LED indicators for system status
+- Real-time monitoring using Arduino
+- Reduces manual effort
 
-## Tech Stack
-- Arduino
-- Sensors
-- Embedded C / Arduino IDE
-- IoT Concepts
+## Components Used
+- Arduino UNO
+- Rain sensor (Analog input)
+- Servo motor
+- LEDs
+- Push button / digital input
+- Basic electronic components
 
-## How It Works
-The system continuously reads input from connected sensors. Based on the sensor values, the Arduino processes the data and triggers the required action automatically. This allows the system to respond to weather changes without manual intervention.
+## Working Principle
+The system reads data from sensors and processes it using Arduino:
+
+- Digital sensor input controls the servo motor position
+- Analog rain sensor detects moisture levels
+- If rain is detected, LED indicator turns ON
+- Additional input controls secondary LED behavior
+- Servo motor adjusts based on environmental input
+
+## Code Implementation
+The Arduino program:
+- Reads digital and analog sensor inputs
+- Controls servo motor using the Servo library
+- Uses conditional logic to trigger actions
+- Displays sensor values via Serial Monitor
 
 ## Project Structure
-- `code/` - Arduino source code
-- `images/` - project photos or setup images
-- `README.md` - project documentation
+- `smart_clothesline.ino` – Arduino source code
+- `images/` – project photos or setup images
+- `README.md` – project documentation
 
 ## Future Improvements
-- Add mobile app or notification system
-- Integrate more sensors for better accuracy
-- Add cloud monitoring for remote access
+- Mobile app integration
+- Cloud-based monitoring
+- Smart notifications
+- Weather prediction integration
